@@ -1,0 +1,265 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+
+    <!-- Floor Content Container -->
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/a_2"
+        app:layout_constraintStart_toStartOf="@+id/floor_container"
+        app:layout_constraintTop_toTopOf="@+id/floor_container" />
+
+    <FrameLayout
+        android:id="@+id/floor_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Room Labels (Free to Move) -->
+
+    <TextView
+    android:id="@+id/label_room_chemstg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="36dp"
+    android:gravity="center"
+    android:tag="chemstg"
+    android:text="CHEM\nSTG"
+    android:textSize="8sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.161" />
+
+    <TextView
+        android:id="@+id/label_room_cra2l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:gravity="center"
+        android:tag="CRA2L"
+        android:text="CRA2L"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_chemstg"
+        app:layout_constraintStart_toEndOf="@+id/label_room_chemstg" />
+
+    <TextView
+        android:id="@+id/label_room_chemlab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:gravity="center"
+        android:tag="CHEMLAB"
+        android:text="CHEMLAB"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_cra2l"
+        app:layout_constraintStart_toEndOf="@+id/label_room_cra2l" />
+
+    <TextView
+        android:id="@+id/label_room_a216"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:gravity="center"
+        android:tag="A-216"
+        android:text="A-216"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_chemlab"
+        app:layout_constraintStart_toEndOf="@+id/label_room_chemlab" />
+
+    <TextView
+        android:id="@+id/label_room_physlab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:gravity="center"
+        android:tag="PHYSICSLAB"
+        android:text="PHYSICSLAB"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_a216"
+        app:layout_constraintStart_toEndOf="@+id/label_room_a216" />
+
+    <TextView
+        android:id="@+id/label_room_biolab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:gravity="center"
+        android:tag="BIOLAB"
+        android:text="BIOLAB"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_physlab"
+        app:layout_constraintStart_toEndOf="@+id/label_room_physlab" />
+
+    <TextView
+        android:id="@+id/label_room_crimrm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="107dp"
+        android:gravity="center"
+        android:tag="CRIM RM"
+        android:text="CRIM RM"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_biolab"
+        app:layout_constraintStart_toEndOf="@+id/label_room_biolab" />
+
+    <TextView
+        android:id="@+id/label_room_cra2r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:gravity="center"
+        android:tag="CRA2R"
+        android:text="CRA2R"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_crimrm"
+        app:layout_constraintStart_toEndOf="@+id/label_room_crimrm" />
+
+
+    <TextView
+        android:id="@+id/label_room_a221"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:gravity="center"
+        android:tag="A-221"
+        android:text="A-221"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.652" />
+
+    <TextView
+        android:id="@+id/label_room_a219"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:gravity="center"
+        android:tag="A-219"
+        android:text="A-219"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_a221"
+        app:layout_constraintStart_toEndOf="@+id/label_room_a221" />
+
+    <TextView
+        android:id="@+id/label_room_a217"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:gravity="center"
+        android:tag="A-217"
+        android:text="A-217"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_a219"
+        app:layout_constraintStart_toEndOf="@+id/label_room_a219" />
+
+    <TextView
+        android:id="@+id/label_room_ceasf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:gravity="center"
+        android:tag="CEAS\nFAC"
+        android:text="CEAS\nFAC"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_a217"
+        app:layout_constraintStart_toEndOf="@+id/label_room_a217" />
+
+    <TextView
+        android:id="@+id/label_room_ceas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:gravity="center"
+        android:tag="CEAS"
+        android:text="CEAS"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_ceasf"
+        app:layout_constraintStart_toEndOf="@+id/label_room_ceasf" />
+
+    <TextView
+        android:id="@+id/label_room_simrm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:gravity="center"
+        android:tag="SIMRM"
+        android:text="SIMRM"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_ceas"
+        app:layout_constraintStart_toEndOf="@+id/label_room_ceas" />
+
+    <TextView
+        android:id="@+id/label_room_a202"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:gravity="center"
+        android:tag="A-202"
+        android:text="A-202"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_simrm"
+        app:layout_constraintStart_toEndOf="@+id/label_room_simrm" />
+
+    <TextView
+        android:id="@+id/label_room_a204"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:gravity="center"
+        android:tag="A-204"
+        android:text="A-204"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_a202"
+        app:layout_constraintStart_toEndOf="@+id/label_room_a202" />
+
+    <TextView
+        android:id="@+id/label_room_ccje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:gravity="center"
+        android:tag="CCJE"
+        android:text="CCJE"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_a204"
+        app:layout_constraintStart_toEndOf="@+id/label_room_a204" />
+
+    <TextView
+        android:id="@+id/label_room_crimlab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:gravity="center"
+        android:tag="CRIMLAB1"
+        android:text="CRIMLAB1"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_ccje"
+        app:layout_constraintStart_toEndOf="@+id/label_room_ccje" />
+
+    <TextView
+        android:id="@+id/label_room_crimlab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:tag="CRIMLAB2"
+        android:text="CRIMLAB2"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_crimlab1"
+        app:layout_constraintStart_toEndOf="@+id/label_room_crimlab1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

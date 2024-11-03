@@ -1,0 +1,275 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/a_1"
+        android:scaleType="centerCrop" />
+
+    <!-- Floor Content Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/floor_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/label_room_rpo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:gravity="center"
+            android:tag="RPO"
+            android:text="RPO"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.161" />
+
+        <TextView
+            android:id="@+id/label_room_cra1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:gravity="center"
+            android:tag="CRA1"
+            android:text="CRA1"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_rpo"
+            app:layout_constraintStart_toEndOf="@+id/label_room_rpo" />
+
+        <TextView
+            android:id="@+id/label_room_comlab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:gravity="center"
+            android:tag="COMlAB2"
+            android:text="COMLAB2"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_cra1"
+            app:layout_constraintStart_toEndOf="@+id/label_room_cra1" />
+
+        <TextView
+            android:id="@+id/label_room_comlab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="96dp"
+            android:gravity="center"
+            android:tag="COMlAB1"
+            android:text="COMLAB1"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_comlab2"
+            app:layout_constraintStart_toEndOf="@+id/label_room_comlab2" />
+
+        <TextView
+            android:id="@+id/label_room_admissions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="132dp"
+            android:gravity="center"
+            android:tag="Admissions"
+            android:text="Admissions"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_comlab1"
+            app:layout_constraintStart_toEndOf="@+id/label_room_comlab1" />
+
+        <TextView
+            android:id="@+id/label_room_hrdoffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:tag="HRD\nOffice"
+            android:text="HRD\nOffice"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_admissions"
+            app:layout_constraintStart_toEndOf="@+id/label_room_admissions" />
+
+        <TextView
+            android:id="@+id/label_room_presoffice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:tag="Pres.\nOffice 2"
+            android:text="Pres.\nOffice 2"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_hrdoffice"
+            app:layout_constraintStart_toEndOf="@+id/label_room_hrdoffice" />
+
+        <TextView
+            android:id="@+id/label_room_execoffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:tag="Exec.\nOffice"
+            android:text="Exec.\nOffice"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_presoffice2"
+            app:layout_constraintStart_toEndOf="@+id/label_room_presoffice2" />
+
+        <TextView
+            android:id="@+id/label_room_boardroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:gravity="center"
+            android:tag="Board\nRoom"
+            android:text="Board\nRoom"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_execoffice"
+            app:layout_constraintStart_toEndOf="@+id/label_room_execoffice" />
+        //
+
+        <TextView
+            android:id="@+id/label_room_col"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:gravity="center"
+            android:tag="College\n of Law"
+            android:text="College\n of Law"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.637" />
+
+        <TextView
+            android:id="@+id/label_room_mootcourt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:gravity="center"
+            android:tag="Moot Court"
+            android:text="Moot Court"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_col"
+            app:layout_constraintStart_toEndOf="@+id/label_room_col" />
+
+        <TextView
+            android:id="@+id/label_room_testingroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:gravity="center"
+            android:tag="Testing\nRoom"
+            android:text="Testing\nRoom"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_mootcourt"
+            app:layout_constraintStart_toEndOf="@+id/label_room_mootcourt" />
+
+        <TextView
+            android:id="@+id/label_room_copwell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:gravity="center"
+            android:tag="COPWELL"
+            android:text="COPWELL"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_testingroom"
+            app:layout_constraintStart_toEndOf="@+id/label_room_testingroom" />
+
+        <TextView
+            android:id="@+id/label_room_registrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:gravity="center"
+            android:tag="Registrar"
+            android:text="Registrar"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_copwell"
+            app:layout_constraintStart_toEndOf="@+id/label_room_copwell" />
+
+        <TextView
+            android:id="@+id/label_room_lobby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:gravity="center"
+            android:tag="Lobby"
+            android:text="Lobby"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_registrar"
+            app:layout_constraintStart_toEndOf="@+id/label_room_registrar" />
+
+        <TextView
+            android:id="@+id/label_room_cashier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:gravity="center"
+            android:tag="Cashier"
+            android:text="Cashier"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_lobby"
+            app:layout_constraintStart_toEndOf="@+id/label_room_lobby" />
+
+        <TextView
+            android:id="@+id/label_room_iqaoffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:gravity="center"
+            android:tag="IQA\nOffice"
+            android:text="IQA\nOffice"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_cashier"
+            app:layout_constraintStart_toEndOf="@+id/label_room_cashier" />
+
+        <TextView
+            android:id="@+id/label_room_datacenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="716dp"
+            android:gravity="center"
+            android:tag="DC"
+            android:text="DC"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7" />
+
+        <TextView
+            android:id="@+id/label_room_chairman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:tag="Chairman"
+            android:text="Chairman"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_datacenter"
+            app:layout_constraintStart_toEndOf="@+id/label_room_datacenter" />
+
+          <TextView
+              android:id="@+id/label_room_presoffice"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="17dp"
+              android:gravity="center"
+              android:tag="Pres.\n Office"
+              android:text="Pres.\n Office"
+              android:textSize="10sp"
+              app:layout_constraintBaseline_toBaselineOf="@+id/label_room_chairman"
+              app:layout_constraintStart_toEndOf="@+id/label_room_chairman" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Room Labels (Free to Move) -->
+
+</RelativeLayout>

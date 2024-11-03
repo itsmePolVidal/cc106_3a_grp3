@@ -1,0 +1,204 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/a_3"
+        app:layout_constraintStart_toStartOf="@+id/floor_container"
+        app:layout_constraintTop_toTopOf="@+id/floor_container" />
+
+    <!-- Floor Content Container -->
+    <FrameLayout
+        android:id="@+id/floor_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Room Labels -->
+
+    <TextView
+        android:id="@+id/label_room_psychlab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:gravity="center"
+        android:tag="PSYCH\nLAB3"
+        android:text="PSYCH\nLAB3"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181" />
+
+    <TextView
+        android:id="@+id/label_room_cra3l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:gravity="center"
+        android:tag="CRA3L"
+        android:text="CRA3L"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_psychlab3"
+        app:layout_constraintStart_toEndOf="@+id/label_room_psychlab3" />
+
+    <TextView
+        android:id="@+id/label_room_avr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:gravity="center"
+        android:tag="AVR"
+        android:text="AVR"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_cra3l"
+        app:layout_constraintStart_toEndOf="@+id/label_room_cra3l" />
+
+    <TextView
+        android:id="@+id/label_room_comlab4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:gravity="center"
+        android:tag="COMLAB4"
+        android:text="COMLAB4"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_avr"
+        app:layout_constraintStart_toEndOf="@+id/label_room_avr" />
+
+    <TextView
+        android:id="@+id/label_room_netlab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:gravity="center"
+        android:tag="NETLAB"
+        android:text="NETLAB"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_comlab4"
+        app:layout_constraintStart_toEndOf="@+id/label_room_comlab4" />
+
+    <TextView
+        android:id="@+id/label_room_futcomlab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:gravity="center"
+        android:tag="FUT.\nCOMLAB"
+        android:text="FUT.\nCOMLAB"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_netlab"
+        app:layout_constraintStart_toEndOf="@+id/label_room_netlab" />
+
+    <TextView
+        android:id="@+id/label_room_cra3r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:gravity="center"
+        android:tag="CRA3R"
+        android:text="CRA3R"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_futcomlab"
+        app:layout_constraintStart_toEndOf="@+id/label_room_futcomlab" />
+
+    <TextView
+        android:id="@+id/label_room_stockrm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:tag="STOCK\nRM"
+        android:text="STOCK\nRM"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_cra3r"
+        app:layout_constraintStart_toEndOf="@+id/label_room_cra3r" />
+
+    <TextView
+        android:id="@+id/label_room_psychlab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:gravity="center"
+        android:tag="PSYCHLAB\n1"
+        android:text="PSYCHLAB\n1"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.665" />
+
+    <TextView
+        android:id="@+id/label_room_psychlab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:tag="PSYCHLAB\n2"
+        android:text="PSYCHLAB\n2"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_psychlab1"
+        app:layout_constraintStart_toEndOf="@+id/label_room_psychlab1" />
+
+    <TextView
+        android:id="@+id/label_room_a317"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:gravity="center"
+        android:tag="A-317"
+        android:text="A-317"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_psychlab2"
+        app:layout_constraintStart_toEndOf="@+id/label_room_psychlab2" />
+
+    <TextView
+        android:id="@+id/label_room_comlab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:gravity="center"
+        android:tag="COMLAB3"
+        android:text="COMLAB3"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_a317"
+        app:layout_constraintStart_toEndOf="@+id/label_room_a317" />
+
+    <TextView
+        android:id="@+id/label_room_nurselab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:gravity="center"
+        android:tag="NURSE\nLAB"
+        android:text="NURSE\nLAB"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_comlab3"
+        app:layout_constraintStart_toEndOf="@+id/label_room_comlab3" />
+
+    <TextView
+        android:id="@+id/label_room_studiorm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="138dp"
+        android:gravity="center"
+        android:tag="STUDIO\nRM"
+        android:text="STUDIO\nRM"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_nurselab"
+        app:layout_constraintStart_toEndOf="@+id/label_room_nurselab" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_map_24"
+            android:title="Main Map" />
+
+        <item
+            android:id="@+id/nav_buildingA"
+            android:icon="@drawable/baseline_business_24"
+            android:title="Building A" />
+
+        <item
+            android:id="@+id/nav_buildingB"
+            android:icon="@drawable/baseline_business_24"
+            android:title="Building B" />
+
+        <item
+            android:id="@+id/nav_buildingC"
+            android:icon="@drawable/baseline_business_24"
+            android:title="Building C" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="Logout" />
+    </group>
+</menu>

@@ -1,0 +1,68 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+
+    <!-- Floor Content Container -->
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/a_2"
+        app:layout_constraintStart_toStartOf="@+id/floor_container"
+        app:layout_constraintTop_toTopOf="@+id/floor_container" />
+
+    <FrameLayout
+        android:id="@+id/floor_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Room Labels (Free to Move) -->
+
+    <TextView
+        android:id="@+id/label_room_c22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:gravity="center"
+        android:tag="C-22"
+        android:text="C-22"
+        app:layout_constraintBottom_toBottomOf="@+id/label_room_c23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/label_room_c23" />
+
+    <TextView
+        android:id="@+id/label_room_c21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:gravity="center"
+        android:tag="C-21"
+        android:text="C-21"
+        app:layout_constraintBottom_toBottomOf="@+id/label_room_c22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/label_room_c22" />
+
+    <TextView
+        android:id="@+id/label_room_c23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="57dp"
+        android:gravity="center"
+        android:tag="C-23"
+        android:text="C-23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

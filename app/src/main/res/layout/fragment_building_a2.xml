@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter room number"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:layout_alignParentTop="true" />
+
+    <!-- Floor Selection Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="1dp">
+
+        <Button
+            android:id="@+id/btn_switch_floor_a1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="1st Floor" />
+
+        <Button
+            android:id="@+id/btn_switch_floor_a2"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="2nd Floor"
+            android:layout_marginStart="20dp" />
+
+        <Button
+            android:id="@+id/btn_switch_floor_a3"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="3rd Floor"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/floor_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="0dp"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+

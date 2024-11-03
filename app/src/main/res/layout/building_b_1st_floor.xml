@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/a_1"
+        android:scaleType="centerCrop" />
+
+    <!-- Floor Content Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/floor_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/label_room_b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:gravity="center"
+            android:tag="B-1"
+            android:text="B-1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26" />
+
+        <TextView
+            android:id="@+id/label_room_b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:gravity="center"
+            android:tag="B-2"
+            android:text="B-2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_b1"
+            app:layout_constraintStart_toEndOf="@+id/label_room_b1" />
+
+        <TextView
+            android:id="@+id/label_room_b3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:gravity="center"
+            android:tag="B-3"
+            android:text="B-3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_b2"
+            app:layout_constraintStart_toEndOf="@+id/label_room_b2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Room Labels (Free to Move) -->
+
+</RelativeLayout>
