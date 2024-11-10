@@ -9,7 +9,7 @@
         android:id="@+id/background_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/a_1"
+        android:src="@drawable/nb1"
         android:scaleType="centerCrop" />
 
     <!-- Floor Content Container -->
@@ -21,41 +21,160 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp">
 
+
         <TextView
-            android:id="@+id/label_room_b1"
+            android:id="@+id/label_room_b101"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="84dp"
+            android:layout_marginStart="500dp"
             android:gravity="center"
-            android:tag="B-1"
-            android:text="B-1"
+            android:tag="B-101"
+            android:text="B-101"
+            android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26" />
+            app:layout_constraintVertical_bias="0.224" />
 
         <TextView
-            android:id="@+id/label_room_b2"
+            android:id="@+id/label_room_library"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="88dp"
+            android:layout_marginStart="176dp"
             android:gravity="center"
-            android:tag="B-2"
-            android:text="B-2"
-            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_b1"
-            app:layout_constraintStart_toEndOf="@+id/label_room_b1" />
+            android:tag="LIBRARY"
+            android:text="LIBRARY"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.428" />
 
         <TextView
-            android:id="@+id/label_room_b3"
+            android:id="@+id/label_room_b103"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="108dp"
+            android:layout_marginStart="40dp"
             android:gravity="center"
-            android:tag="B-3"
-            android:text="B-3"
-            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_b2"
-            app:layout_constraintStart_toEndOf="@+id/label_room_b2" />
+            android:tag="B-103"
+            android:text="B-103"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_b101"
+            app:layout_constraintStart_toEndOf="@+id/label_room_b101" />
+
+        <TextView
+            android:id="@+id/label_room_corpcom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:gravity="center"
+            android:tag="CORP COM\nOFFICE"
+            android:text="CORP COM\nOFFICE"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_b103"
+            app:layout_constraintStart_toEndOf="@+id/label_room_b103" />
+
+        <TextView
+            android:id="@+id/label_room_homeeconomics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:tag="HOME\nECONOMICS"
+            android:text="HOME\nECONOMICS"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_corpcom"
+            app:layout_constraintStart_toEndOf="@+id/label_room_corpcom" />
+
+        <TextView
+            android:id="@+id/label_room_crb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:gravity="center"
+            android:tag="CRB1"
+            android:text="CBR1"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_homeeconomics"
+            app:layout_constraintStart_toEndOf="@+id/label_room_homeeconomics" />
+
+        <TextView
+            android:id="@+id/label_room_b102"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="500dp"
+            android:gravity="center"
+            android:tag="B-102"
+            android:text="B-102"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.717" />
+
+        <TextView
+            android:id="@+id/label_room_b104"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:tag="B-104"
+            android:text="B-104"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_b102"
+            app:layout_constraintStart_toEndOf="@+id/label_room_b102" />
+
+        <TextView
+            android:id="@+id/label_room_saep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:tag="SAEP"
+            android:text="SAEP"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_b104"
+            app:layout_constraintStart_toEndOf="@+id/label_room_b104" />
+
+        <TextView
+            android:id="@+id/label_room_clinic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:tag="CLINIC"
+            android:text="CLINIC"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_saep"
+            app:layout_constraintStart_toEndOf="@+id/label_room_saep" />
+
+        <TextView
+            android:id="@+id/label_room_b110"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:gravity="center"
+            android:tag="B-110"
+            android:text="B-110"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_clinic"
+            app:layout_constraintStart_toEndOf="@+id/label_room_clinic" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Room Labels (Free to Move) -->
 

@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:src="@drawable/a_2"
+        android:src="@drawable/na2"
         app:layout_constraintStart_toStartOf="@+id/floor_container"
         app:layout_constraintTop_toTopOf="@+id/floor_container" />
 
@@ -33,7 +33,7 @@
     android:id="@+id/label_room_chemstg"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="36dp"
+    android:layout_marginStart="33dp"
     android:gravity="center"
     android:tag="chemstg"
     android:text="CHEM\nSTG"
@@ -132,7 +132,7 @@
         android:id="@+id/label_room_a221"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="75dp"
         android:gravity="center"
         android:tag="A-221"
         android:text="A-221"

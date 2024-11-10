@@ -22,7 +22,7 @@ public class BuildingCFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Lock orientation
+        // Lock orientation to landscape when the fragment is created
         requireActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 
@@ -56,7 +56,7 @@ public class BuildingCFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        // Show the bottom navigation
+        // Show the bottom navigation again when leaving the fragment
         requireActivity().findViewById(R.id.bottomNavigationView).setVisibility(View.VISIBLE);
         requireActivity().findViewById(R.id.bottomAppBar).setVisibility(View.GONE);
         requireActivity().findViewById(R.id.fab).setVisibility(View.GONE);
@@ -65,7 +65,7 @@ public class BuildingCFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        // Reset orientation
+        // Reset orientation to the default when leaving the fragment
         requireActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
     }
 

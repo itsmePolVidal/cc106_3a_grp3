@@ -53,7 +53,7 @@ public class GridAdapter extends BaseAdapter {
         ImageView imageView = convertView.findViewById(R.id.grid_image);
         TextView textView = convertView.findViewById(R.id.Item_name);
 
-
+        // Use the instances instead of the classes
         imageView.setImageResource(image[position]);
         textView.setText(UBMap[position]);
 

@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:src="@drawable/a_2"
+        android:src="@drawable/nc2"
         app:layout_constraintStart_toStartOf="@+id/floor_container"
         app:layout_constraintTop_toTopOf="@+id/floor_container" />
 

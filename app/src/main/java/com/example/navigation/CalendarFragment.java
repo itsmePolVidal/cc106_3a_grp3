@@ -24,7 +24,7 @@ public class CalendarFragment extends Fragment implements CalendarAdapter.OnItem
     private LocalDate selectedDate;
 
     public CalendarFragment() {
-
+        // Required empty public constructor
     }
 
     public static CalendarFragment newInstance(String param1, String param2) {
@@ -40,7 +40,7 @@ public class CalendarFragment extends Fragment implements CalendarAdapter.OnItem
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-
+            // handle parameters if needed
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             selectedDate = LocalDate.now();
@@ -50,32 +50,32 @@ public class CalendarFragment extends Fragment implements CalendarAdapter.OnItem
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_calendar, container, false);
 
-
+        // Initialize widgets and set month view
         initWidgets(view);
         setMonthView();
 
-
+        // Find buttons and set click listeners
         Button nextButton = view.findViewById(R.id.nextButton);
         Button previousButton = view.findViewById(R.id.previousButton);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nextMonthAction();
+                nextMonthAction(); // Call the nextMonthAction method
             }
         });
 
         previousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                previousMonthAction();
+                previousMonthAction(); // Call the previousMonthAction method
             }
         });
 
-        return view;
+        return view; // Ensure this is the last statement in the method
     }
 
     public void nextMonthAction() {

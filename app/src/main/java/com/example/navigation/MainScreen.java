@@ -55,7 +55,7 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Navigation drawer
+        // Toggle for the navigation drawer
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -64,12 +64,13 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         fab = findViewById(R.id.fab);
 
+        // Set initial fragment if there's no saved state
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fra_layout, new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
 
-        // Bottom Navigation
+        // Bottom Navigation item selection handling
         bottomNavigationView.setBackground(null);
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
@@ -90,14 +91,14 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
         // FAB click event
         fab.setOnClickListener(view -> showBottomDialog());
 
-
+        // Handle window insets for proper layout padding
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-
+        // Back press handling
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {

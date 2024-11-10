@@ -12,23 +12,24 @@ import android.view.ViewGroup;
 
 public class GalleryFragment extends Fragment {
 
-
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-
+    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    private String[] UBMap = {"BLDG A", "BLDG B", "BLDG C", "Canteen", "Gym", "Bookstore","Study Area" };
-    private int[] image = {R.drawable.a,R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g};
+    private String[] UBMap = {"Building A", "Building B", "Building C", "Canteen", "Gym", "Bookstore","Study Area","" };
+    private int[] image = {R.drawable.a,R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g, R.drawable.h};
 
     public GalleryFragment() {
-
+        // Required empty public constructor
     }
 
 
-
+    // TODO: Rename and change types and number of parameters
     public static GalleryFragment newInstance(String param1, String param2) {
         GalleryFragment fragment = new GalleryFragment();
         Bundle args = new Bundle();
@@ -50,7 +51,7 @@ public class GalleryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_gallery, container, false);
 
         GridView gridView = view.findViewById(R.id.gridView); // Replace with your GridView ID

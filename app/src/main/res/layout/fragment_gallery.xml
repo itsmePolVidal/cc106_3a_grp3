@@ -10,11 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="1"
-        android:verticalSpacing="5dp"
-        android:layout_marginTop="20dp"
-        android:horizontalSpacing="10dp"
+        android:verticalSpacing="0dp"
+        android:layout_marginTop="10dp"
+        android:horizontalSpacing="0dp"
         android:stretchMode="columnWidth"
-        android:gravity="center"/>
+        android:gravity="center"
+
+    />
 
     <!-- TODO: Update blank fragment layout -->
 
