@@ -1,7 +1,6 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -18,51 +17,224 @@
         app:layout_constraintStart_toStartOf="@+id/floor_container"
         app:layout_constraintTop_toTopOf="@+id/floor_container" />
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/floor_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
 
     <!-- Room Labels (Free to Move) -->
 
     <TextView
-        android:id="@+id/label_room_c22"
+        android:id="@+id/label_room_c219"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="180dp"
+        android:layout_marginStart="168dp"
         android:gravity="center"
-        android:tag="C-22"
-        android:text="C-22"
-        app:layout_constraintBottom_toBottomOf="@+id/label_room_c23"
+        android:tag="C-219"
+        android:text="C-219"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/label_room_c23" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.200"/>
 
     <TextView
-        android:id="@+id/label_room_c21"
+        android:id="@+id/label_room_c217"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="83dp"
+        android:layout_marginStart="45dp"
         android:gravity="center"
-        android:tag="C-21"
-        android:text="C-21"
-        app:layout_constraintBottom_toBottomOf="@+id/label_room_c22"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/label_room_c22" />
+        android:tag="C-217"
+        android:text="C-217"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c219"
+        app:layout_constraintStart_toEndOf="@id/label_room_c219" />
 
     <TextView
-        android:id="@+id/label_room_c23"
+        android:id="@+id/label_room_c215"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="328dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginStart="43dp"
         android:gravity="center"
-        android:tag="C-23"
-        android:text="C-23"
+        android:tag="C-215"
+        android:text="C-215"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c217"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c217"  />
+
+    <TextView
+        android:id="@+id/label_room_hk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:gravity="center"
+        android:tag="HOT KITCHEN"
+        android:text="HOT KITCHEN"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c215"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c215"/>
+
+    <TextView
+        android:id="@+id/label_room_ct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:gravity="center"
+        android:tag="CAFE TRATTORIA"
+        android:text="CAFE TRATTORIA"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_hk"
+        app:layout_constraintStart_toEndOf="@+id/label_room_hk" />
+
+    <TextView
+        android:id="@+id/label_room_c209"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:gravity="center"
+        android:tag="C-209"
+        android:text="C-209"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_ct"
+        app:layout_constraintStart_toEndOf="@+id/label_room_ct" />
+
+
+    <TextView
+        android:id="@+id/label_room_c221"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:gravity="center"
+        android:tag="C-221"
+        android:text="C-221"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.630" />
+
+    <TextView
+        android:id="@+id/label_room_c220"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:gravity="center"
+        android:tag="C-220"
+        android:text="C-220"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c221"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c221" />
+
+    <TextView
+        android:id="@+id/label_room_c218"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:gravity="center"
+        android:tag="C-218"
+        android:text="C-218"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c220"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c220" />
+
+    <TextView
+        android:id="@+id/label_room_c216"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:gravity="center"
+        android:tag="C-216"
+        android:text="C-216"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c218"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c218" />
+
+    <TextView
+        android:id="@+id/label_room_c214"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:gravity="center"
+        android:tag="C-214"
+        android:text="C-214"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c216"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c216" />
+
+    <TextView
+        android:id="@+id/label_room_c202"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="94dp"
+        android:gravity="center"
+        android:tag="C-202"
+        android:text="C-202"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c214"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c214" />
+
+    <TextView
+        android:id="@+id/label_room_c204"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:gravity="center"
+        android:tag="C-204"
+        android:text="C-204"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c202"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c202" />
+
+    <TextView
+        android:id="@+id/label_room_c206"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:gravity="center"
+        android:tag="C-206"
+        android:text="C-206"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c204"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c204" />
+
+    <TextView
+        android:id="@+id/label_room_c208"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:gravity="center"
+        android:tag="C-208"
+        android:text="C-208"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c206"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c206" />
+
+    <TextView
+        android:id="@+id/label_room_c210"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:gravity="center"
+        android:tag="C-210"
+        android:text="C-210"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c208"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c208" />
+
+    <TextView
+        android:id="@+id/label_room_c211"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:gravity="center"
+        android:tag="C-211"
+        android:text="C-211"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c210"
+        app:layout_constraintStart_toEndOf="@+id/label_room_c210" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>

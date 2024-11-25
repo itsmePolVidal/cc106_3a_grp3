@@ -1,11 +1,12 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <!-- Background Image -->
+
+    <!-- Floor Content Container -->
     <ImageView
         android:id="@+id/background_image"
         android:layout_width="wrap_content"
@@ -16,53 +17,261 @@
         app:layout_constraintTop_toTopOf="@+id/floor_container" />
 
     <!-- Floor Content Container -->
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/floor_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
 
-    <!-- Room Labels -->
+        <TextView
+            android:id="@+id/label_room_crc3l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:gravity="center"
+            android:tag="CRC3L"
+            android:text="CRC3L"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.193" />
 
-    <TextView
-        android:id="@+id/label_room_c33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginEnd="81dp"
-        android:gravity="center"
-        android:tag="C-33"
-        android:text="C-33"
-        app:layout_constraintBottom_toBottomOf="@+id/label_room_c32"
-        app:layout_constraintEnd_toStartOf="@+id/label_room_c32"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/label_room_c32" />
+        <TextView
+            android:id="@+id/label_room_comlab5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:gravity="center"
+            android:tag="COMLAB5"
+            android:text="COMLAB5"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_crc3l"
+            app:layout_constraintStart_toEndOf="@+id/label_room_crc3l" />
 
-    <TextView
-        android:id="@+id/label_room_c31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="65dp"
-        android:gravity="center"
-        android:tag="C-31"
-        android:text="C-31"
-        app:layout_constraintStart_toEndOf="@+id/label_room_c32"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/label_room_drawinglab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:gravity="center"
+            android:tag="DRAWLAB3"
+            android:text="DRAWLAB3"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_comlab5"
+            app:layout_constraintStart_toEndOf="@+id/label_room_comlab5" />
 
-    <TextView
-        android:id="@+id/label_room_c32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="191dp"
-        android:gravity="center"
-        android:tag="C-32"
-        android:text="C-32"
-        app:layout_constraintBottom_toBottomOf="@+id/label_room_c31"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/label_room_c31" />
+        <TextView
+            android:id="@+id/label_room_ielab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="49dp"
+            android:gravity="center"
+            android:tag="IE\nLAB"
+            android:text="IE\nLAB"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_drawinglab3"
+            app:layout_constraintStart_toEndOf="@+id/label_room_drawinglab3" />
+
+        <TextView
+            android:id="@+id/label_room_cpelab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:gravity="center"
+            android:tag="CPE LAB"
+            android:text="CPE LAB"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_ielab"
+            app:layout_constraintStart_toEndOf="@+id/label_room_ielab" />
+
+        <TextView
+            android:id="@+id/label_room_c303"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:gravity="center"
+            android:tag="C-303"
+            android:text="C-303"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_cpelab"
+            app:layout_constraintStart_toEndOf="@+id/label_room_cpelab" />
+
+        <TextView
+            android:id="@+id/label_room_c305"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:gravity="center"
+            android:tag="C-305"
+            android:text="C-305"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c303"
+            app:layout_constraintStart_toEndOf="@+id/label_room_c303" />
+
+
+        <TextView
+            android:id="@+id/label_room_c307"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:gravity="center"
+            android:tag="C-307"
+            android:text="C-307"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c305"
+            app:layout_constraintStart_toEndOf="@+id/label_room_c305" />
+
+
+        <TextView
+            android:id="@+id/label_room_c309"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:gravity="center"
+            android:tag="C-309"
+            android:text="C-309"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c307"
+            app:layout_constraintStart_toEndOf="@+id/label_room_c307" />
+
+        <TextView
+            android:id="@+id/label_room_crc3r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="79dp"
+            android:gravity="center"
+            android:tag="CRC3R"
+            android:text="CRC3R"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c309"
+            app:layout_constraintStart_toEndOf="@+id/label_room_c309" />
+
+        <TextView
+            android:id="@+id/label_room_engtoolroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:gravity="center"
+            android:tag="ENG\nTOOL\nROOM"
+            android:text="ENG\nTOOL\nROOM"
+            android:textSize="7sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.647" />
+
+        <TextView
+            android:id="@+id/label_room_drawinglab5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:gravity="center"
+            android:tag="DRAWLAB5"
+            android:text="DRAWLAB5"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_engtoolroom"
+            app:layout_constraintStart_toEndOf="@+id/label_room_engtoolroom" />
+
+        <TextView
+            android:id="@+id/label_room_drawinglab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:gravity="center"
+            android:tag="DRAWLAB4"
+            android:text="DRAWLAB4"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_drawinglab5"
+            app:layout_constraintStart_toEndOf="@+id/label_room_drawinglab5" />
+
+        <TextView
+            android:id="@+id/label_room_stdrmarch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:gravity="center"
+            android:tag="STUDIO\nROOM\nARCH"
+            android:text="STUDIO\nROOM\nARCH"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_drawinglab4"
+            app:layout_constraintStart_toEndOf="@+id/label_room_drawinglab4" />
+
+        <TextView
+            android:id="@+id/label_room_c302"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
+            android:gravity="center"
+            android:tag="C-302"
+            android:text="C-302"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_stdrmarch"
+            app:layout_constraintStart_toEndOf="@+id/label_room_stdrmarch" />
+
+
+        <TextView
+            android:id="@+id/label_room_c304"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:tag="C-304"
+            android:text="C-304"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c302"
+            app:layout_constraintStart_toEndOf="@+id/label_room_c302" />
+
+        <TextView
+            android:id="@+id/label_room_c306"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:textSize="9sp"
+            android:gravity="center"
+            android:tag="C-306"
+            android:text="C-306"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c304"
+            app:layout_constraintStart_toEndOf="@+id/label_room_c304" />
+
+        <TextView
+            android:id="@+id/label_room_c308"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:gravity="center"
+            android:tag="C-308"
+            android:text="C-308"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c306"
+            app:layout_constraintStart_toEndOf="@+id/label_room_c306" />
+
+        <TextView
+            android:id="@+id/label_room_c310"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:gravity="center"
+            android:tag="C-310"
+            android:text="C-310"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c308"
+            app:layout_constraintStart_toEndOf="@+id/label_room_c308" />
+
+        <TextView
+            android:id="@+id/label_room_c311"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:textSize="9sp"
+            android:gravity="center"
+            android:tag="C-311"
+            android:text="C-311"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_c310"
+            app:layout_constraintStart_toEndOf="@+id/label_room_c310" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

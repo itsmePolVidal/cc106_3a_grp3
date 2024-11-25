@@ -12,10 +12,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 public class BuildingAFragment extends Fragment {
 
+
+    public class SecondActivity extends AppCompatActivity {
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.fragment_building_a2);
+        }
+    }
     private FrameLayout floorContainer;
     private EditText searchBar;
 
@@ -89,10 +99,6 @@ public class BuildingAFragment extends Fragment {
             case "rpo":
                 loadFloorLayout(R.layout.building_a_1st_floor);
                 highlightLabel("label_room_rpo");
-                break;
-            case "cra1":
-                loadFloorLayout(R.layout.building_a_1st_floor);
-                highlightLabel("label_room_cra1");
                 break;
             case "comlab2":
                 loadFloorLayout(R.layout.building_a_1st_floor);
@@ -172,10 +178,6 @@ public class BuildingAFragment extends Fragment {
                 loadFloorLayout(R.layout.building_a_2nd_floor);
                 highlightLabel("label_room_chemstg");
                 break;
-            case "cra2l":
-                loadFloorLayout(R.layout.building_a_2nd_floor);
-                highlightLabel("label_room_cra2l");
-                break;
             case "chemlab":
                 loadFloorLayout(R.layout.building_a_2nd_floor);
                 highlightLabel("label_room_chemlab");
@@ -253,10 +255,7 @@ public class BuildingAFragment extends Fragment {
                 loadFloorLayout(R.layout.building_a_3rd_floor);
                 highlightLabel("label_room_psychlab3");
                 break;
-            case "cra3l":
-                loadFloorLayout(R.layout.building_a_3rd_floor);
-                highlightLabel("label_room_cra3l");
-                break;
+
             case "avr":
                 loadFloorLayout(R.layout.building_a_3rd_floor);
                 highlightLabel("label_room_avr");
@@ -273,10 +272,6 @@ public class BuildingAFragment extends Fragment {
                 loadFloorLayout(R.layout.building_a_3rd_floor);
                 highlightLabel("label_room_futcomlab");
                 break;
-            case "cra3r":
-                loadFloorLayout(R.layout.building_a_3rd_floor);
-                highlightLabel("label_room_cra3r");
-                break;
             case "stockrm":
                 loadFloorLayout(R.layout.building_a_3rd_floor);
                 highlightLabel("label_room_stockrm");
@@ -292,6 +287,10 @@ public class BuildingAFragment extends Fragment {
             case "a-317":
                 loadFloorLayout(R.layout.building_a_3rd_floor);
                 highlightLabel("label_room_a317");
+                break;
+            case "a-318":
+                loadFloorLayout(R.layout.building_a_3rd_floor);
+                highlightLabel("label_room_a318");
                 break;
             case "a-315":
                 loadFloorLayout(R.layout.building_a_3rd_floor);

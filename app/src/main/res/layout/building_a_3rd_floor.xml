@@ -6,16 +6,17 @@
     android:layout_height="match_parent">
 
     <!-- Background Image -->
+
+    <!-- Floor Content Container -->
     <ImageView
         android:id="@+id/background_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:src="@drawable/na3"
+        android:src="@drawable/a3"
         app:layout_constraintStart_toStartOf="@+id/floor_container"
         app:layout_constraintTop_toTopOf="@+id/floor_container" />
 
-    <!-- Floor Content Container -->
     <FrameLayout
         android:id="@+id/floor_container"
         android:layout_width="wrap_content"
@@ -105,7 +106,7 @@
         android:id="@+id/label_room_cra3r"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
+        android:layout_marginStart="74dp"
         android:gravity="center"
         android:tag="CRA3R"
         android:text="CRA3R"
@@ -117,7 +118,7 @@
         android:id="@+id/label_room_stockrm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="32dp"
         android:gravity="center"
         android:tag="STOCK\nRM"
         android:text="STOCK\nRM"
@@ -164,22 +165,34 @@
         app:layout_constraintStart_toEndOf="@+id/label_room_psychlab2" />
 
     <TextView
-        android:id="@+id/label_room_comlab3"
+        android:id="@+id/label_room_a318"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
+        android:layout_marginStart="48dp"
         android:gravity="center"
-        android:tag="COMLAB3"
-        android:text="COMLAB3"
+        android:tag="A-318"
+        android:text="A-318"
         android:textSize="10sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/label_room_a317"
         app:layout_constraintStart_toEndOf="@+id/label_room_a317" />
 
     <TextView
+        android:id="@+id/label_room_comlab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:gravity="center"
+        android:tag="COMLAB3"
+        android:text="COMLAB3"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/label_room_a318"
+        app:layout_constraintStart_toEndOf="@+id/label_room_a318" />
+
+    <TextView
         android:id="@+id/label_room_nurselab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="178dp"
+        android:layout_marginStart="164dp"
         android:gravity="center"
         android:tag="NURSE\nLAB"
         android:text="NURSE\nLAB"

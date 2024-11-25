@@ -106,10 +106,6 @@ public class BuildingBFragment extends Fragment {
                 loadFloorLayout(R.layout.building_b_1st_floor);
                 highlightLabel("label_room_homeeconomics");
                 break;
-            case "crb1":
-                loadFloorLayout(R.layout.building_b_1st_floor);
-                highlightLabel("label_room_crb1");
-                break;
             case "b-102":
                 loadFloorLayout(R.layout.building_b_1st_floor);
                 highlightLabel("label_room_b102");
@@ -128,10 +124,6 @@ public class BuildingBFragment extends Fragment {
                 break;
 
             //2nd Floor
-            case "crb2l":
-                loadFloorLayout(R.layout.building_b_2nd_floor);
-                highlightLabel("label_room_crb2l");
-                break;
             case "b-218":
                 loadFloorLayout(R.layout.building_b_2nd_floor);
                 highlightLabel("label_room_b218");
@@ -163,10 +155,6 @@ public class BuildingBFragment extends Fragment {
             case "b-207":
                 loadFloorLayout(R.layout.building_b_2nd_floor);
                 highlightLabel("label_room_b207");
-                break;
-            case "crb2r":
-                loadFloorLayout(R.layout.building_b_2nd_floor);
-                highlightLabel("label_room_crb2r");
                 break;
             case "b-221":
                 loadFloorLayout(R.layout.building_b_2nd_floor);
@@ -217,10 +205,6 @@ public class BuildingBFragment extends Fragment {
             case "drawinglab1":
                 loadFloorLayout(R.layout.building_b_3rd_floor);
                 highlightLabel("label_room_drawinglab1");
-                break;
-            case "crb3l":
-                loadFloorLayout(R.layout.building_b_3rd_floor);
-                highlightLabel("label_room_crb3l");
                 break;
             case "b-314":
                 loadFloorLayout(R.layout.building_b_3rd_floor);

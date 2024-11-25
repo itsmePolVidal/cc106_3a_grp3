@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+
+    <!-- Floor Content Container -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/c4floor"
+        app:layout_constraintStart_toStartOf="@+id/floor_container"
+        app:layout_constraintTop_toTopOf="@+id/floor_container" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/floor_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/label_room_crc4l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="58dp"
+            android:gravity="center"
+            android:tag="CRC4L"
+            android:text="CRC4L"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.253" />
+
+        <TextView
+            android:id="@+id/label_room_crc4r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="710dp"
+            android:gravity="center"
+            android:tag="CRC4R"
+            android:text="CRC4R"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_crc4l"
+            app:layout_constraintStart_toEndOf="@+id/label_room_crc4l" />
+
+        <TextView
+            android:id="@+id/label_room_lobbyc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="104dp"
+            android:gravity="center"
+            android:tag="LOBBY"
+            android:text="LOBBY"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.638" />
+
+        <TextView
+            android:id="@+id/label_room_mph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="280dp"
+            android:gravity="center"
+            android:tag="MULTI-PURPOSE HALL"
+            android:text="MULTI-PURPOSE HALL"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/label_room_tlh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="215dp"
+            android:gravity="center"
+            android:tag="TIERED LECTURE ROOM"
+            android:text="TIERED LECTURE ROOM"
+            android:textSize="9sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_room_mph"
+            app:layout_constraintStart_toEndOf="@+id/label_room_mph" />
+
+        <TextView
+            android:id="@+id/label_room_ctrlrm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="750dp"
+            android:gravity="center"
+            android:tag="CONTROL\nROOM"
+            android:text="CONTROL\nROOM"
+            android:textSize="7sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.582" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

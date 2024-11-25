@@ -1,6 +1,7 @@
 package com.example.navigation;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -30,6 +31,7 @@ import java.time.LocalDate;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainScreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -66,7 +68,7 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
 
         // Set initial fragment if there's no saved state
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fra_layout, new HomeFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fra_layout,new Fragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
 
@@ -91,6 +93,8 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
         // FAB click event
         fab.setOnClickListener(view -> showBottomDialog());
 
+
+
         // Handle window insets for proper layout padding
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -98,15 +102,13 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
             return insets;
         });
 
-        // Back press handling
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
                 if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                    drawerLayout.closeDrawer(GravityCompat.START);
+                    drawerLayout.closeDrawer(GravityCompat.START); // Close the drawer if open
                 } else {
-                    setEnabled(false);  // Disable callback for default behavior
-                    MainScreen.super.onBackPressed();
+                    // Do nothing to avoid navigating back
                 }
             }
         });
@@ -124,26 +126,30 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.bottomlayout);
 
-        LinearLayout photoLayout = dialog.findViewById(R.id.layoutphoto);
-        LinearLayout faveLayout = dialog.findViewById(R.id.layoutfave);
-        LinearLayout reminderLayout = dialog.findViewById(R.id.layoutreminder);
+        LinearLayout buildingALayout = dialog.findViewById(R.id.layoutphoto); // Reuse layout for Building A
+        LinearLayout buildingBLayout = dialog.findViewById(R.id.layoutfave);  // Reuse layout for Building B
+        LinearLayout buildingCLayout = dialog.findViewById(R.id.layoutreminder); // Reuse layout for Building C
         ImageView cancelButton = dialog.findViewById(R.id.cancelButton);
 
-        photoLayout.setOnClickListener(v -> {
+        // Building A
+        buildingALayout.setOnClickListener(v -> {
             dialog.dismiss();
-            Toast.makeText(MainScreen.this, "Add Photo is clicked", Toast.LENGTH_SHORT).show();
+            showImageDialog(R.drawable.af, "Building A Dictionary");
         });
 
-        faveLayout.setOnClickListener(v -> {
+        // Building B
+        buildingBLayout.setOnClickListener(v -> {
             dialog.dismiss();
-            Toast.makeText(MainScreen.this, "Add Favorites is Clicked", Toast.LENGTH_SHORT).show();
+            showImageDialog(R.drawable.bf, "Building B Dictionary");
         });
 
-        reminderLayout.setOnClickListener(v -> {
+        // Building C
+        buildingCLayout.setOnClickListener(v -> {
             dialog.dismiss();
-            Toast.makeText(MainScreen.this, "Add Reminder is Clicked", Toast.LENGTH_SHORT).show();
+            showImageDialog(R.drawable.cf, "Building C Dictionary");
         });
 
+        // Cancel button
         cancelButton.setOnClickListener(view -> dialog.dismiss());
 
         dialog.show();
@@ -151,6 +157,22 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.getWindow().setGravity(Gravity.BOTTOM);
+    }
+
+    private void showImageDialog(int imageResource, String title) {
+        final Dialog imageDialog = new Dialog(this);
+        imageDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        imageDialog.setContentView(R.layout.image_dialog);
+
+        ImageView imageView = imageDialog.findViewById(R.id.dialogImageView);
+        TextView titleView = imageDialog.findViewById(R.id.dialogTitle);
+
+        imageView.setImageResource(imageResource);
+        titleView.setText(title);
+
+        imageDialog.show();
+        imageDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        imageDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 
     @Override
@@ -165,8 +187,12 @@ public class MainScreen extends AppCompatActivity implements NavigationView.OnNa
             replaceFragment(new BuildingBFragment());
         } else if (itemId == R.id.nav_buildingC) {
             replaceFragment(new BuildingCFragment());
+        } else if (itemId == R.id.nav_about_us) {
+            replaceFragment(new AboutUsFragment());
         } else if (itemId == R.id.nav_logout) {
             Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainScreen.this, Login.class);
+            startActivity(intent);
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

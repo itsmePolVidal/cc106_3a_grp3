@@ -25,6 +25,11 @@
             android:title="Building C" />
 
         <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/baseline_groups_24"
+            android:title="About Us" />
+
+        <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/baseline_logout_24"
             android:title="Logout" />

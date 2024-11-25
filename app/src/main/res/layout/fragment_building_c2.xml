@@ -40,6 +40,13 @@
             android:layout_height="45dp"
             android:text="3rd Floor"
             android:layout_marginStart="20dp" />
+
+        <Button
+            android:id="@+id/btn_switch_floor_c4"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="4th Floor"
+            android:layout_marginStart="20dp" />
     </LinearLayout>
 
     <FrameLayout
